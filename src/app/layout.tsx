@@ -1,21 +1,22 @@
-import type { Metadata } from 'next';
-// app/layout.tsx
+import { DemoBadge } from '@/components/DemoBadge';
 import Navbar from '@/components/navbar/Navbar';
+import '@/styles/global.css';
 
-export const metadata: Metadata = {
-  title: 'My App',
-  description: 'Welcome to my Next.js app!',
-};
+export default async function RootLayout(props: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await props.params;
 
-export default function layout() {
+  // The `suppressHydrationWarning` attribute in <body> is used to prevent hydration errors caused by Sentry Overlay,
+  // which dynamically adds a `style` attribute to the body tag.
+
   return (
-    <html lang="en">
-      <body>
-
+    <html lang={locale}>
+      <body suppressHydrationWarning>
         <Navbar />
-
-        <main></main>
-
+        {props.children}
+        <DemoBadge />
       </body>
     </html>
   );
