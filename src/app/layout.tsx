@@ -13,7 +13,7 @@ export default async function RootLayout(props: {
 
   return (
     <html lang={locale}>
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className="bg-gradient-to-b from-[#F0F1F2]  to-[#F2F2F0]">
         <Navbar />
         {props.children}
         <DemoBadge />
