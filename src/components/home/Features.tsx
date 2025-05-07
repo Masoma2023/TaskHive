@@ -9,7 +9,7 @@ export default function Features() {
         <h2 className="text-[#022155] text-[28px] sm:text-[32px] md:text-[38px] font-semibold">What TaskHive offers</h2>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-4 px-4">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-10 px-4">
         <div className="max-w-[460px]">
           <Image
             src="/Rectangle 16.png"
@@ -51,7 +51,7 @@ export default function Features() {
       <div className="flex items-center justify-center pt-15">
         <Link
           href="#"
-          className="text-[16px] text-[#022155] font-normal border-b-2 mb-20 border-b-[#022155] cursor-pointer"
+          className="text-[16px] text-[#022155] font-normal border-b-2 border-transparent hover:border-[#022155] transition-all duration-300 mb-20 cursor-pointer transform hover:scale-125"
         >
           Show more
         </Link>

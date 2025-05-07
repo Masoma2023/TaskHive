@@ -17,8 +17,8 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container max-w-[1000px] mx-auto mt-16 flex flex-col-reverse lg:flex-row items-center justify-between px-4 gap-10">
-        <div className="text-center lg:text-left">
+      <div className="container max-w-[1000px] mx-auto mt-16 flex flex-col-reverse lg:flex-row items-center justify-between px-4 gap-12 pt-10 md:p-0">
+        <div className="text-center lg:text-left order-2 md:order-none">
           <h1 className="font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] text-[#0D1728] leading-tight">
             Structure your <br /> tasks. Power your <br /> productivity
           </h1>
@@ -27,15 +27,15 @@ export default function Hero() {
           </p>
           <Link
             href="#"
-            className="font-normal cursor-pointer text-[18px] sm:text-[20px] text-[#022155] bg-[#FACC15] rounded-md px-4 py-2 inline-block mt-8"
+            className="font-normal cursor-pointer text-[18px] sm:text-[20px] text-[#022155] bg-[#FACC15] rounded-md px-4 py-2 inline-block mt-8 hover:bg-[#022155] transform hover:scale-110 transition duration-400 hover:text-white"
           >
             Join Task Hive
           </Link>
         </div>
-        <div>
+        <div className="order-1 md:order-none">
           <Image
             src="/phone and desktop _ phone.png"
-            className="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px]"
+            className="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[700px]"
             width={1000}
             height={1000}
             alt="Hero Image"
