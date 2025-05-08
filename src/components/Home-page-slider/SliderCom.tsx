@@ -14,10 +14,10 @@ import 'swiper/css/pagination';
 function SliderComp() {
   return (
     <>
-      <div className="mx-auto w-full my-20 py-32 px-10 bg-[#022155] max-w-7xl">
+      <div className="mx-auto w-full my-20 py-32 lg:px-10 bg-[#0D1728] max-w-7xl">
         <div className="my-4">
           <div className="w-32 h-[2px] mx-auto bg-white my-2"></div>
-          <h3 className="text-gray-200 text-2xl text-center">
+          <h3 className="text-[#FFFFFF] text-2xl text-center">
             What they say about Us
           </h3>
         </div>
@@ -30,7 +30,7 @@ function SliderComp() {
             clickable: true,
           }}
           autoplay={{
-            delay: 3000,
+            delay: 4000,
             disableOnInteraction: true,
           }}
           modules={[Pagination, Autoplay]}

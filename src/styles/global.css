@@ -56,23 +56,6 @@ body {
   transition: all 0.3s ease !important;
 }
 
-@media screen and (max-width: 578px) {
-  .swiper-slide-active {
-    transform: scale(0.8) !important;
-    transition: all 0.3s ease !important;
-  }
-
-  .swiper-slide-active .textBox {
-    transform: translateX(20px) !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .swiper-slide-active .textBox {
-    transform: translateX(50px);
-  }
-}
-
 .swiper-slide-active .textBox {
   background-color: var(--yellow);
   color: black;
@@ -85,4 +68,45 @@ body {
 
 .swiper-slide-active .customBorder {
   border: 2px solid var(--yellow);
+}
+
+.swiper-pagination {
+  position: relative !important;
+  bottom: -3px !important;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1 !important;
+  width: 10px !important;
+  height: 10px !important;
+  background-color: transparent !important;
+  border: 1px solid white !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+@media screen and (max-width: 578px) {
+  .swiper-slide-active {
+    transform: scale(0.8) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .swiper-slide-active .textBox {
+    transform: translateX(20px) !important;
+  }
+
+  .swiper-pagination {
+    position: absolute !important;
+    bottom: 10px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-slide-active .textBox {
+    transform: translateX(50px);
+  }
 }
