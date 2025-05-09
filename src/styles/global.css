@@ -104,9 +104,3 @@ body {
     bottom: 10px !important;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .swiper-slide-active .textBox {
-    transform: translateX(50px);
-  }
-}

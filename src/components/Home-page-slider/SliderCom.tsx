@@ -14,17 +14,17 @@ import 'swiper/css/pagination';
 function SliderComp() {
   return (
     <>
-      <div className="mx-auto w-full my-20 py-32 lg:px-10 bg-[#0D1728] max-w-7xl">
+      <div className="mx-auto w-full my-20 py-16 px-4 sm:px-6 lg:px-10 bg-[#0D1728] max-w-7xl">
         <div className="my-4">
-          <div className="w-32 h-[2px] mx-auto bg-white my-2"></div>
-          <h3 className="text-[#FFFFFF] text-2xl text-center">
+          <div className="w-16 h-[2px] mx-auto bg-white my-2 sm:w-32"></div>
+          <h3 className="text-[#FFFFFF] text-xl text-center sm:text-2xl lg:text-3xl">
             What they say about Us
           </h3>
         </div>
         <Swiper
           slidesPerView="auto"
           centeredSlides={true}
-          spaceBetween={30}
+          spaceBetween={20}
           loop={true}
           pagination={{
             clickable: true,
@@ -36,23 +36,27 @@ function SliderComp() {
           modules={[Pagination, Autoplay]}
           breakpoints={{
             320: {
-              width: 320,
               slidesPerView: 1,
+              spaceBetween: 10,
             },
             576: {
-              width: 576,
               slidesPerView: 2,
+              spaceBetween: 15,
             },
             768: {
-              width: 768,
               slidesPerView: 2,
+              spaceBetween: 20,
             },
             1024: {
-              width: 1024,
               slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1440: {
+              slidesPerView: 3,
+              spaceBetween: 40,
             },
           }}
-          className="mySwiper lg:translate-x-8"
+          className="mySwiper"
         >
           {slideData.map(slide => (
             <SwiperSlide className="bg-transparent" key={slide.id}>
