@@ -4,13 +4,13 @@ import Link from 'next/link';
 export default function Features() {
   return (
     <>
-      <div className="h-auto pb-7 pt-44 flex items-center justify-center flex-col text-center px-4  dark:bg-black">
+      <div className="h-auto pb-7 pt-40 md:pt-20 lg:pt-56 flex items-center justify-center flex-col text-center  dark:bg-black">
         <h3 className="text-[#6B7B94] font-normal text-[22px] sm:text-[26px] md:text-[28px] dark:text-[#6B7B94]">Features</h3>
         <h2 className="text-[#022155] text-[28px] sm:text-[32px] md:text-[38px] font-semibold dark:text-white">What TaskHive offers</h2>
       </div>
 
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-12  dark:bg-black">
-        <div className="lg:max-w-[460px] md:max-w-[380px] max-w-[280px]">
+        <div className="lg:max-w-[500px] md:max-w-[380px] max-w-[280px]">
           <Image
             src="/Rectangle16.png"
             width={1000}
@@ -29,7 +29,7 @@ export default function Features() {
             </div>
           </div>
         </div>
-        <div className="lg:max-w-[460px] md:max-w-[380px] max-w-[280px]">
+        <div className="lg:max-w-[500px] md:max-w-[380px] max-w-[280px]">
           <Image
             src="/Rectangle16(1).png"
             width={1000}
