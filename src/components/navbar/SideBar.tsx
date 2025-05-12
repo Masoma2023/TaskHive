@@ -35,9 +35,16 @@ export default function Sidebar() {
             <span className="flex md:hidden justify-center items-center ">
               <LightDarkMode />
             </span>
-            <button onClick={toggleSidebar}>
+            <div
+              onClick={toggleSidebar}
+              onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && toggleSidebar()}
+              role="button"
+              tabIndex={0}
+              className="fixed top-3 z-50 p-2"
+              aria-label="Open sidebar"
+            >
               <FiX className="w-6 h-6" />
-            </button>
+            </div>
           </div>
 
         </div>
@@ -72,12 +79,17 @@ export default function Sidebar() {
 
       {/* Open Sidebar Button */}
       {!isOpen && (
-        <button
+        <div
           onClick={toggleSidebar}
+          onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && toggleSidebar()}
+          role="button"
+          tabIndex={0}
           className="fixed top-3 z-50 p-2"
+          aria-label="Open sidebar"
         >
           <RiMenu5Fill className="w-8 h-8 text-[#022155]" />
-        </button>
+        </div>
+
       )}
     </div>
   );

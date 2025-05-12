@@ -45,7 +45,7 @@ export default function Navbar() {
       <div className="flex items-center md:space-x-4 space-x-12">
 
         {/* Sign Up Button */}
-        <button className="flex md:hidden mb-1"><Sidebar /></button>
+        <div className="flex md:hidden mb-1"><Sidebar /></div>
         <Link
           href="/signup"
           className="bg-[#022155] text-white px-4 py-2 md:flex hidden rounded-lg font-medium hover:bg-[#42516bab] transition duration-300"
@@ -53,7 +53,9 @@ export default function Navbar() {
           Sign Up
         </Link>
         {/* Theme Toggle */}
-        <span className="md:flex hidden"><LightDarkMode /></span>
+        <div className="md:flex hidden">
+          <LightDarkMode />
+        </div>
 
       </div>
     </nav>

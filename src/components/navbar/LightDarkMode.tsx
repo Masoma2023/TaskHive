@@ -24,7 +24,9 @@ export default function LightDarkMode() {
   };
 
   return (
+
     <button
+      type="button"
       onClick={toggleTheme}
       className="w-14 h-8 bg-white border-1 border-gray-500 rounded-full flex items-center px-1 transition-all duration-300 flex"
     >
@@ -42,5 +44,6 @@ export default function LightDarkMode() {
             )}
       </div>
     </button>
+
   );
 }
