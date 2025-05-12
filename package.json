@@ -6,7 +6,6 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev:spotlight": "spotlight-sidecar",
     "dev:next": "next dev",
     "dev": "run-p dev:*",
     "build": "next build",
