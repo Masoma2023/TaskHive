@@ -1,1 +1,44 @@
 @import 'tailwindcss';
+/* about page styles */
+:root {
+  --yellow: #facc15;
+  --darkSky: #6b7b94;
+  --sliderBg: #0d1728;
+  --primaryText: #0f172a;
+  --secondaryText: #6b7b94;
+  --darkModeBg: #0f172a;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 24px;
+  top: 4px;
+  left: 4px;
+  background-color: rgb(2, 2, 132);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(10, 101, 237);
+}
+
+input:checked + .slider::before {
+  transform: translateX(32px);
+  background-color: white !important;
+}
+
+@media (max-width: 768px) {
+  .slider::before {
+    top: 3px;
+    width: 14px;
+    height: 14px;
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(19px);
+    background-color: white !important;
+  }
+}
