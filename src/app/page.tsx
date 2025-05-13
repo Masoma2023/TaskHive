@@ -1,3 +1,4 @@
+import SliderComp from '@/components/Home-page-slider/SliderCom';
 import Features from '@/components/home/Features';
 import Hero from '@/components/home/Hero';
 
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <Features />
+      <SliderComp />
     </>
   );
 }
