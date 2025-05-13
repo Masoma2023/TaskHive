@@ -28,7 +28,7 @@ function About() {
   };
 
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-white dark:bg-slate-950">
       <Image src={taskhive3} width={100} height={100} className="absolute right-0 size-36 lg:size-32" alt="task-hive3" />
       <Container>
         <div className="realative">
@@ -58,16 +58,16 @@ function About() {
           <div>
           </div>
           <div className="flex flex-row w-full justify-between md:justify-center items-center md:space-x-8 pt-40 md:py-8 mt-8 md:mt-5">
-            <div className="border border-gray-400 p-2 rounded-md">
+            <div className="border border-gray-400 p-2 rounded-md dark:bg-slate-800">
               <BiDna className="size-4 md:size-6 dark:text-white" />
             </div>
-            <div className="border border-gray-400 p-2 rounded-md">
+            <div className="border border-gray-400 p-2 rounded-md dark:bg-slate-800">
               <AiOutlineSecurityScan className="size-4 md:size-6 dark:text-white" />
             </div>
-            <div className="border border-gray-400 p-2 rounded-md">
+            <div className="border border-gray-400 p-2 rounded-md dark:bg-slate-800">
               <HiOutlineChartBar className="size-4 md:size-6 dark:text-white" />
             </div>
-            <div className="border border-gray-400 p-2 rounded-md">
+            <div className="border border-gray-400 p-2 rounded-md dark:bg-slate-800">
               <LuBrain className="size-4 md:size-6 dark:text-white" />
             </div>
           </div>

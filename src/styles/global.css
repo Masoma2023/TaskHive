@@ -6,6 +6,7 @@
   --sliderBg: #0d1728;
   --primaryText: #0f172a;
   --secondaryText: #6b7b94;
+  --darkModeBg: #0f172a;
 }
 
 .slider::before {

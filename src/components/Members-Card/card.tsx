@@ -13,7 +13,7 @@ function Card(member: memberType) {
             <h3 className="text-[var(--primaryText)] dark:text-white text-xl">{member?.name}</h3>
             <p className="lg:w-70 text-[var(--secondaryText)] dark:text-gray-300">{member?.job}</p>
           </div>
-          <div className="border border-gray-400 p-2 rounded">
+          <div className="border border-gray-400 p-2 rounded dark:bg-slate-800">
             <SlSocialLinkedin className="size-5 font-bold dark:text-white" />
           </div>
         </div>
