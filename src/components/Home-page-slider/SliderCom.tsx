@@ -1,5 +1,6 @@
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
+// import  from 'swiper';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
