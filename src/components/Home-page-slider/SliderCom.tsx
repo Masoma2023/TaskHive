@@ -1,3 +1,4 @@
+'use client';
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
 // import  from 'swiper';
