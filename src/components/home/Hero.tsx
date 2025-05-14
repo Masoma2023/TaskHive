@@ -6,7 +6,7 @@ import React from 'react';
 export default function Hero() {
   return (
     <>
-      <div className="w-full relative pb-10 dark:bg-black">
+      <div className="w-full relative pb-10 dark:bg-black ">
         <Image
           src="/hive_vibe(2).png"
           width={1000}
