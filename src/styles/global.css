@@ -2,13 +2,13 @@
 /* about page styles */
 :root {
   --yellow: #facc15;
-  --darkSky: #6b7b94;
+  --darkSky: #dde8fb;
   --sliderBg: #0d1728;
   --primaryText: #0f172a;
   --secondaryText: #6b7b94;
   --darkModeBg: #0f172a;
+  --button: #022155;
 }
-
 .slider::before {
   position: absolute;
   content: '';
