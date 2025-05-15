@@ -1,7 +1,13 @@
-import React from 'react';
+import SliderComp from '@/components/Home-page-slider/SliderCom';
+import Features from '@/components/home/Features';
+import Hero from '@/components/home/Hero';
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <>
+      <Hero />
+      <Features />
+      <SliderComp />
+    </>
   );
 }
