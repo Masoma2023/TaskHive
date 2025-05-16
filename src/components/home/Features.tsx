@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Features() {
   return (
     <>
-      <div className="h-auto pb-7 pt-44 flex items-center justify-center flex-col text-center px-4  dark:bg-black">
+      <div className="h-auto pb-7 pt-44 flex items-center justify-center flex-col text-center px-4  dark:bg-black ">
         <h3 className="text-[#6B7B94] font-normal text-[22px] sm:text-[26px] md:text-[28px] dark:text-[#6B7B94]">Features</h3>
         <h2 className="text-[#022155] text-[28px] sm:text-[32px] md:text-[38px] font-semibold dark:text-white">What TaskHive offers</h2>
       </div>
