@@ -31,19 +31,19 @@ export default function Sidebar() {
       >
         <div className="flex items-center justify-between p-4 border-b-gray-800">
           <Image height={1500} width={1500} src="/Logo.png" alt="task hive logo" className="h-4 w-20" />
-          <div className="flex space-x-2">
-            <span className="flex md:hidden justify-center items-center ">
+          <div className="flex items-center justify-between">
+            <div className="flex md:hidden justify-center items-center ">
               <LightDarkMode />
-            </span>
+            </div>
             <div
               onClick={toggleSidebar}
               onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && toggleSidebar()}
               role="button"
               tabIndex={0}
-              className="fixed top-3 z-50 p-2"
+              className="fixed top-3n p-2"
               aria-label="Open sidebar"
             >
-              <FiX className="w-6 h-6" />
+              <FiX className="w-6 h-6 " />
             </div>
           </div>
 
@@ -84,7 +84,7 @@ export default function Sidebar() {
           onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && toggleSidebar()}
           role="button"
           tabIndex={0}
-          className="fixed top-3 z-50 p-2"
+          className="z-50"
           aria-label="Open sidebar"
         >
           <RiMenu5Fill className="w-8 h-8 text-[#022155]" />

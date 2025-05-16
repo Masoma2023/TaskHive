@@ -28,7 +28,7 @@ export default function LightDarkMode() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="w-14 h-8 bg-white border-1 border-gray-500 rounded-full flex items-center px-1 transition-all duration-300 flex"
+      className="w-14 h-8 bg-white border-1 border-gray-500 rounded-full items-center px-1 transition-all duration-300 flex"
     >
       <div
         className={`w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ${
