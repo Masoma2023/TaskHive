@@ -18,7 +18,7 @@ export default function Features() {
       </div>
 
       <div className="max-w-7xl mx-auto md:pt-14 pt-16 lg:pt-10 px-4 sm:px-6 lg:px-8">
-        <p className="text-[20px] sm:text-[26px] md:text-[28px] text-[#6B7B94] font-normal text-center mb-6">
+        <p className="text-[20px] sm:text-[26px] md:text-[28px] text-[#6B7B94] font-normal text-center">
           Features
         </p>
 
@@ -28,21 +28,21 @@ export default function Features() {
             width={1000}
             height={1000}
             alt="Honeycomb"
-            className="w-full"
+            className="w-[90%] lg:ml-16"
             priority
           />
 
           <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6">
-            <h2 className="text-center text-[#0D1728] text-[20px] sm:text-[30px] md:text-[38px] lg:text-[48px] font-medium leading-tight max-w-2xl">
+            <h2 className="text-center text-[#0D1728] text-[20px] sm:text-[30px] md:text-[38px] lg:text-[48px] font-medium leading-tight lg:max-w-2xl md:max-w-[550px] max-w-[450px]">
               Powerful features designed to keep your tasks on track.
             </h2>
           </div>
         </div>
       </div>
-      <div className="absolute left-0 lg:top-[760px] md:top-[630px] top-[480px]">
+      <div className="absolute left-0 lg:top-[450px] md:top-[500px] top-[320px]">
         <Image src="/Group71.png" alt="Honeycomb" className="w-36 md:w-44 lg:w-56" width={1000} height={1000} />
       </div>
-      <div className="h-auto pb-7 lg:pt-100 md:pt-50 pt-80 flex items-center justify-center flex-col text-center px-4">
+      <div className="h-auto pb-7 lg:pt-70 md:pt-40 pt-64 flex items-center justify-center flex-col text-center px-4">
         <h3 className="text-[#6B7B94] font-normal text-[22px] sm:text-[26px] md:text-[28px] ">Features</h3>
         <h2 className="text-[#022155] text-[28px] sm:text-[32px] md:text-[38px] font-semibold ">What TaskHive offers</h2>
       </div>
