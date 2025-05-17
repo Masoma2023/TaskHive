@@ -42,7 +42,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute left-0 top-[750px] md:top-[700px]">
+      <div className="absolute left-0 top-[600px] md:top-[600px] lg:top-[600px]">
         <Image src="/Group71.png" alt="Honeycomb" className="w-36 md:w-44 lg:w-56" width={1000} height={1000} />
       </div>
 
