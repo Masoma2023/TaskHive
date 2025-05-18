@@ -1,12 +1,12 @@
 import Container from '@/components/container/Container';
+import beeImage from '@/public/contact page images/Group82.png';
+import beeImage3 from '@/public/contact page images/Group83.png';
+import beeImage2 from '@/public/contact page images/Group88.png';
+import beeImage4 from '@/public/contact page images/Group89.png';
+import backImage1 from '@/public/contact page images/GroupHive.png';
+import backImage2 from '@/public/contact page images/hive-vibe(3).png';
 import Image from 'next/image';
 import React from 'react';
-import beeImage from '../../../public/contact page images/Group82.png';
-import beeImage3 from '../../../public/contact page images/Group83.png';
-import beeImage2 from '../../../public/contact page images/Group88.png';
-import beeImage4 from '../../../public/contact page images/Group89.png';
-import backImage1 from '../../../public/contact page images/GroupHive.png';
-import backImage2 from '../../../public/contact page images/hive-vibe(3).png';
 
 function ContactPage() {
   return (
