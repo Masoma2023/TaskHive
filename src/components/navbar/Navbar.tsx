@@ -16,7 +16,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="border-b-gray-800 bg-white md:px-12 px-4 py-4 shadow flex justify-between items-center">
+    <nav className="border-b-gray-800 md:px-12 px-4 py-4 shadow flex justify-between items-center">
       {/* Logo */}
       <Image height={1500} width={1500} src="/Logo.png" alt="task hive logo" className="h-6 w-26" />
 
