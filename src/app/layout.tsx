@@ -16,9 +16,9 @@ export default async function RootLayout(props: {
       <body suppressHydrationWarning className="bg-gradient-to-b from-[#F0F1F2]  to-[#F2F2F0]">
         <Navbar />
         {props.children}
-
+        <Footer />
       </body>
-      <Footer />
+
     </html>
   );
 }
