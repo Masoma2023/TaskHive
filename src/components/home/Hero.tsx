@@ -12,7 +12,7 @@ export default function Hero() {
           width={1000}
           height={1000}
           alt="Honeycomb"
-          className="absolute w-36 top-0 right-0 md:w-44 block dark:hidden"
+          className="absolute w-36 top-0 right-0 md:w-44 block lg:w-56 dark:hidden"
           priority
         />
         <Image
@@ -20,12 +20,12 @@ export default function Hero() {
           width={1000}
           height={1000}
           alt="Honeycomb"
-          className="absolute w-36 top-0 right-0 md:w-44 hidden dark:block"
+          className="absolute w-36 top-0 right-0 md:w-44 hidden lg:w-56 dark:block"
           priority
         />
       </div>
       <div className="dark:bg-black">
-        <div className=" lg:px-36 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12  md:p-0 ">
+        <div className=" lg:px-20 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12  md:p-0 ">
           <div className=" text-center sm:pt-6 pt-10 lg:text-left order-2  lg:pb-16 lg:order-none dark:bg-black">
             <h1 className="font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] text-[#0D1728] leading-tight dark:text-white">
               Structure your <br /> tasks. Power your <br /> productivity
@@ -60,8 +60,8 @@ export default function Hero() {
         </div>
       </div>
       <div className="absolute left-0 top-[750px] md:top-[620px]">
-        <Image src="/Group71.png" alt="Honeycomb" className="w-36 md:w-44  block dark:hidden" width={1000} height={1000} />
-        <Image src="/Group711.png" alt="Honeycomb" className="w-36 md:w-44 hidden dark:block" width={1000} height={1000} />
+        <Image src="/Group71.png" alt="Honeycomb" className="w-36 md:w-44 lg:w-56  block dark:hidden" width={1000} height={1000} />
+        <Image src="/Group711.png" alt="Honeycomb" className="w-36 md:w-44 lg:w-56 hidden dark:block" width={1000} height={1000} />
       </div>
 
     </>
