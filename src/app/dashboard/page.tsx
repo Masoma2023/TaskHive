@@ -1,3 +1,4 @@
+'use client';
 import Charts from '@/components/dashboard/Charts';
 import OnGoingTask from '@/components/dashboard/OnGoingTask';
 import SideBarDashboard from '@/components/dashboard/SideBarDashboard';
