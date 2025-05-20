@@ -13,6 +13,7 @@ export default function Navbar() {
     { href: '/about', label: 'About' },
     { href: '/features', label: 'Features' },
     { href: '/contact', label: 'Contact' },
+
   ];
 
   return (
@@ -48,6 +49,7 @@ export default function Navbar() {
         <div className="flex md:hidden mb-1"><Sidebar /></div>
         <Link
           href="/signup"
+
           className="bg-[#022155] text-white px-4 py-2 md:flex hidden rounded-lg font-medium hover:bg-[#42516bab] transition duration-300"
         >
           Sign Up
