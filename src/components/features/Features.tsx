@@ -47,8 +47,8 @@ export default function Features() {
         <h2 className="text-[#022155] text-[28px] sm:text-[32px] md:text-[38px] font-semibold ">What TaskHive offers</h2>
       </div>
 
-      <div className="flex max-w-7xl mx-auto flex-col lg:flex-row items-center justify-center gap-12 lg:gap-12">
-        <div className="lg:max-w-[460px] md:max-w-[380px] max-w-[280px]">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-12">
+        <div className="lg:max-w-[500px] md:max-w-[380px] max-w-[280px]">
           <Image
             src="/Rectangle16.png"
             width={1000}
@@ -86,7 +86,7 @@ export default function Features() {
         </div>
 
       </div>
-      <div className="flex max-w-7xl mx-auto flex-col lg:flex-row items-center justify-center gap-12 lg:gap-12 pt-10">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-12 pt-10">
         <div className="lg:max-w-[460px] md:max-w-[380px] max-w-[280px]">
           <Image
             src="/Rectangle160.png"
