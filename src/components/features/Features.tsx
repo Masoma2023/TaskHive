@@ -66,7 +66,7 @@ export default function Features() {
             </div>
           </div>
         </div>
-        <div className="lg:max-w-[460px] md:max-w-[380px] max-w-[280px]">
+        <div className="lg:max-w-[500px] md:max-w-[380px] max-w-[280px]">
           <Image
             src="/Rectangle16(1).png"
             width={1000}
@@ -87,7 +87,7 @@ export default function Features() {
 
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-12 pt-10">
-        <div className="lg:max-w-[460px] md:max-w-[380px] max-w-[280px]">
+        <div className="lg:max-w-[500px] md:max-w-[380px] max-w-[280px]">
           <Image
             src="/Rectangle160.png"
             width={1000}
@@ -100,12 +100,16 @@ export default function Features() {
             <div>
               <h3 className="font-medium text-[20px] text-[#0D1728]">Smart Filters & Search</h3>
               <p className="font-normal text-[16px] text-[#6B7B94] mt-2">
-                Quickly find what you need. Filter tasks by priority, status, and date. Use keyword search to zero in on the most relevant tasks.
+                Quickly find what you need. Filter tasks by priority,
+                {' '}
+                <br />
+                {' '}
+                status, and date. Use keyword search to zero in on the most relevant tasks.
               </p>
             </div>
           </div>
         </div>
-        <div className="lg:max-w-[460px] md:max-w-[380px] max-w-[280px]">
+        <div className="lg:max-w-[500px] md:max-w-[380px] max-w-[280px]">
           <Image
             src="/Rectangle1600.png"
             width={1000}
