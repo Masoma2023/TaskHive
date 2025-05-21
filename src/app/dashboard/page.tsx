@@ -1,9 +1,9 @@
 'use client';
-import Charts from '@/components/dashboard/Charts';
 import OnGoingTask from '@/components/dashboard/OnGoingTask';
 import SideBarDashboard from '@/components/dashboard/SideBarDashboard';
+
+import TaskState from '@/components/dashboard/state/TaskState';
 import SummaryCards from '@/components/dashboard/SummaryCards';
-import TaskState from '@/components/dashboard/TaskState';
 import TopBarDashboard from '@/components/dashboard/TopBarDashboard';
 import React from 'react';
 
@@ -35,14 +35,11 @@ export default function DashboardPage() {
           <div className="col-span-1">
             <OnGoingTask />
           </div>
-          <div className="col-span-2 grid grid-cols-2 gap-6">
-            <div className="col-span-2">
-              <Charts />
-            </div>
-            <div className="col-span-2">
-              <TaskState />
-            </div>
+
+          <div className="flex">
+            <TaskState />
           </div>
+
         </div>
       </main>
     </div>
