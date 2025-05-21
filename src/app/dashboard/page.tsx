@@ -1,4 +1,3 @@
-'use client';
 import Charts from '@/components/dashboard/Charts';
 import OnGoingTask from '@/components/dashboard/OnGoingTask';
 import SideBarDashboard from '@/components/dashboard/SideBarDashboard';
@@ -36,6 +35,17 @@ export default function DashboardPage() {
             <OnGoingTask />
           </div>
           <div className="col-span-2 grid grid-cols-2 gap-6">
+            <div className="grid col-span-2 md:grid-cols-2 gap-6 items-center relative">
+              <div className="grid col-span-1">
+                <h2 className="text-2xl text-slate-800 font-semibold">Task by day</h2>
+                <p className="text-slate-500">Showing task creation per day in this month</p>
+              </div>
+              <select className="px-4 py-2 rounded md:grid border w-40 focus:outline-0 cursor-pointer border-gray-300 col-span-1 absolute right-0 bg-white">
+                <option value="Junuary">Junuary</option>
+                <option value="Febreuary">Febreuary</option>
+                <option value="May">May</option>
+              </select>
+            </div>
             <div className="col-span-2">
               <Charts />
             </div>
