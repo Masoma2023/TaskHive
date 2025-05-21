@@ -14,7 +14,7 @@ type ChartRef = {
   render: () => void;
 };
 
-class BarChart extends Component {
+class Charts extends Component {
   chart: ChartRef | null = null;
 
   constructor(props: object) {
@@ -138,4 +138,4 @@ class BarChart extends Component {
   }
 }
 
-export default BarChart;
+export default Charts;

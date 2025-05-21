@@ -1,4 +1,4 @@
-import MyChart from '@/components/dashboard/Charts';
+import Charts from '@/components/dashboard/Charts';
 import OnGoingTask from '@/components/dashboard/OnGoingTask';
 import SideBarDashboard from '@/components/dashboard/SideBarDashboard';
 import SummaryCards from '@/components/dashboard/SummaryCards';
@@ -47,7 +47,7 @@ export default function DashboardPage() {
               </select>
             </div>
             <div className="col-span-2">
-              <MyChart />
+              <Charts />
             </div>
             <div className="col-span-2">
               <TaskState />
