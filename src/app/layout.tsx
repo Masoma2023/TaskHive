@@ -1,10 +1,10 @@
-import { DemoBadge } from '@/components/DemoBadge';
+import Footer from '@/components/Footer';
 import Navbar from '@/components/navbar/Navbar';
 import '@/styles/global.css';
 
 export default async function RootLayout(props: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  readonly children: React.ReactNode;
+  readonly params: Promise<{ locale: string }>;
 }) {
   const { locale } = await props.params;
 
@@ -13,10 +13,10 @@ export default async function RootLayout(props: {
 
   return (
     <html lang={locale}>
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className="bg-gradient-to-b from-[#F0F1F2]  to-[#F2F2F0]">
         <Navbar />
         {props.children}
-        <DemoBadge />
+        <Footer />
       </body>
     </html>
   );
