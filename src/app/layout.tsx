@@ -18,7 +18,6 @@ export default async function RootLayout(props: {
         {props.children}
         <Footer />
       </body>
-
     </html>
   );
 }

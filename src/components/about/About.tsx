@@ -34,9 +34,9 @@ function About() {
         <div className="realative">
           <div className="flex flex-col md:flex-row lg:px-8 lg:py-16 justify-between text-center">
             <div className="space-y-1 text-center md:text-left md:px-20 lg:px-0 lg:text-left pt-20 pb-10 lg:py-20">
-              <p className="lg:text-lg text-lg text-[var(--secondaryText)] dark:text-gray-300">About Us</p>
-              <h2 className="text-xl headerText lg:text-4xl xl:text-6xl font-bold lg:font-semibold md:w-60 lg:w-md xl:w-2xl text-[var(--primaryText)] dark:text-white">Built to help you work smarter — not harder.</h2>
-              <p className="md:w-70 lg:w-90 text-[var(--secondaryText)] dark:text-gray-300 text-sm lg:text-lg">Task Hive is a modern productivity tool designed for people who value structure, clarity, and smart workflows.</p>
+              <p className="lg:text-lg text-lg text-[var(--secondaryText)]">About Us</p>
+              <h2 className="text-xl headerText lg:text-4xl xl:text-6xl font-bold lg:font-semibold md:w-60 lg:w-md xl:w-2xl text-[var(--primaryText)]">Built to help you work smarter — not harder.</h2>
+              <p className="md:w-70 lg:w-90 text-[var(--secondaryText)] text-sm lg:text-lg">Task Hive is a modern productivity tool designed for people who value structure, clarity, and smart workflows.</p>
             </div>
             <div>
               <div className="absolute right-0">
@@ -58,25 +58,25 @@ function About() {
           <div>
           </div>
           <div className="flex flex-row w-full justify-between md:justify-center items-center md:space-x-8 pt-40 md:py-8 mt-8 md:mt-5">
-            <div className="border border-gray-400 p-2 rounded-md dark:bg-slate-800">
-              <BiDna className="size-4 md:size-6 dark:text-white" />
+            <div className="border border-gray-400 p-2 rounded-md">
+              <BiDna className="size-4 md:size-6" />
             </div>
-            <div className="border border-gray-400 p-2 rounded-md dark:bg-slate-800">
-              <AiOutlineSecurityScan className="size-4 md:size-6 dark:text-white" />
+            <div className="border border-gray-400 p-2 rounded-md">
+              <AiOutlineSecurityScan className="size-4 md:size-6" />
             </div>
-            <div className="border border-gray-400 p-2 rounded-md dark:bg-slate-800">
-              <HiOutlineChartBar className="size-4 md:size-6 dark:text-white" />
+            <div className="border border-gray-400 p-2 rounded-md">
+              <HiOutlineChartBar className="size-4 md:size-6" />
             </div>
-            <div className="border border-gray-400 p-2 rounded-md dark:bg-slate-800">
-              <LuBrain className="size-4 md:size-6 dark:text-white" />
+            <div className="border border-gray-400 p-2 rounded-md">
+              <LuBrain className="size-4 md:size-6" />
             </div>
           </div>
         </div>
 
         <div className="mx-auto">
           <div className="text-center py-6">
-            <h3 className="text-lg text-[var(--primaryText)] dark:text-gray-300">Meet our team</h3>
-            <h1 className="text-xl md:text-3xl font-semibold text-[var(--primaryText)] dark:text-white">Awesome team members</h1>
+            <h3 className="text-lg text-[var(--primaryText)] ">Meet our team</h3>
+            <h1 className="text-xl md:text-3xl font-semibold text-[var(--primaryText)]">Awesome team members</h1>
           </div>
           <div className="md:grid grid-cols-3 gap-6 lg:px-10 2xl:px-0">
             {
@@ -87,8 +87,8 @@ function About() {
           </div>
 
           <div className="text-center py-10">
-            <h4 className="text-lg text-slate-700 cursor-pointer hover:opacity-80 transition duration-150 active:scale-95 dark:text-gray-300">show more</h4>
-            <div className="bg-slate-700 dark:bg-slate-500 mx-auto w-24 h-0.5"></div>
+            <h4 className="text-lg text-slate-700 cursor-pointer hover:opacity-80 transition duration-150 active:scale-95 ">show more</h4>
+            <div className="bg-slate-700 mx-auto w-24 h-0.5"></div>
           </div>
         </div>
       </Container>
