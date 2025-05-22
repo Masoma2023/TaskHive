@@ -25,7 +25,7 @@ export default function DashboardPage() {
         <h1 className="text-2xl font-semibold mb-6">Hi, Seddiqa 👋</h1>
 
         {/* Summary cards */}
-        <div className="grid grid-cols-4 gap-4 mb-6">
+        <div className="grid lg:grid-cols-4 gap-4 mb-6 md:grid-cols-2 grid-cols-2">
           <SummaryCards />
         </div>
 
