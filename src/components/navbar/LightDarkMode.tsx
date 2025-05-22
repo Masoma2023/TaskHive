@@ -1,20 +1,20 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { IoMoonOutline, IoSunnyOutline } from 'react-icons/io5';
 
 export default function LightDarkMode() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('theme') as 'light' | 'dark';
-      if (stored) {
-        setTheme(stored);
-        document.documentElement.classList.toggle('dark', stored === 'dark');
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const stored = localStorage.getItem('theme') as 'light' | 'dark';
+  //     if (stored) {
+  //       setTheme(stored);
+  //       document.documentElement.classList.toggle('dark', stored === 'dark');
+  //     }
+  //   }
+  // }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
