@@ -8,7 +8,8 @@ import SummaryCards from '@/components/dashboard/SummaryCards';
 import TopBarDashboard from '@/components/dashboard/TopBarDashboard';
 import React from 'react';
 
-export default function DashboardPage() {
+// eslint-disable-next-line @next/next/no-async-client-component
+export default async function DashboardPage() {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
@@ -24,7 +25,9 @@ export default function DashboardPage() {
         </header>
 
         {/* Greeting */}
-        <h1 className="text-2xl font-semibold mb-6">Hi, Seddiqa 👋</h1>
+        <h1 className="text-2xl font-semibold mb-6">
+          Hi there, welcome 👋
+        </h1>
 
         {/* Summary cards */}
         <div className="grid lg:grid-cols-4 gap-4 mb-6 md:grid-cols-2 grid-cols-2">

@@ -1,11 +1,13 @@
 'use client';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Loading from '../Loading';
 import LightDarkMode from './LightDarkMode';
-import Sidebar from './SideBar';
 
 export default function Navbar() {
+  const { data: session, status } = useSession();
   const pathname = usePathname();
 
   const links = [
@@ -45,15 +47,31 @@ export default function Navbar() {
       {/* Right controls */}
       <div className="flex items-center md:space-x-4 space-x-12">
 
-        {/* Sign Up Button */}
-        <div className="flex md:hidden mb-1"><Sidebar /></div>
-        <Link
-          href="/signup"
-
-          className="bg-[#022155] text-white px-4 py-2 md:flex hidden rounded-lg font-medium hover:bg-[#42516bab] transition duration-300"
-        >
-          Sign Up
-        </Link>
+        <div>
+          {status === 'loading'
+            ? (
+                <Loading />
+              )
+            : session
+              ? (
+                  <button
+                    type="button"
+                    onClick={() => signOut()}
+                    className="bg-red-500 cursor-pointer hover:opacity-80 active:scale-99 text-white px-4 py-2 rounded-md"
+                  >
+                    Log Out
+                  </button>
+                )
+              : (
+                  <button
+                    type="button"
+                    onClick={() => signIn()}
+                    className="bg-sky-800 cursor-pointer hover:opacity-80 active:scale-99 text-white px-4 py-2 rounded-md"
+                  >
+                    Sign In
+                  </button>
+                )}
+        </div>
         {/* Theme Toggle */}
         <div className="md:flex hidden">
           <LightDarkMode />

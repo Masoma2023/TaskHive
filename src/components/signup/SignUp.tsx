@@ -1,84 +1,112 @@
 'use client';
+import axios from 'axios';
+import { Eye, EyeOff } from 'lucide-react'; // Optional: lucide-react icons
+import { useRouter } from 'next/navigation';
+import { Suspense, useState } from 'react';
+import Loading from '../Loading';
 
-import { Lock, Mail, User } from 'lucide-react';
-import Image from 'next/image';
-
-import { useState } from 'react';
-
-export default function SignUp() {
+export default function SignUpPage() {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
+  const [error, setError] = useState('');
+  const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    // eslint-disable-next-line no-console
+    console.log(name, email, password);
+    e.preventDefault();
+    try {
+      // https://taskhivebackend.onrender.com/api/users
+      await axios.post('https://taskhivebackend.onrender.com/api/users/signup', {
+        name,
+        email,
+        password,
+      }, { headers: { 'Content-Type': 'application/json' } });
+      router.push('/signin');
+    } catch (err: any) {
+    // eslint-disable-next-line no-console
+      console.log(err?.response?.data?.msg);
+      setError(err?.response?.data?.message || 'Something went wrong');
+    }
+  };
 
   return (
-    <div className="min-h-screen relative flex  items-center justify-center overflow-hidden">
-      {/* Decorative honeycomb */}
-      <div className="right-0 top-1/4 absolute transform -translate-y-1/2 z-0 h-64 w-64">
-        <Image
-          src="/Group76.png"
-          width={600}
-          height={600}
-          alt="Honeycomb "
-          priority
-        />
-      </div>
+    <Suspense fallback={<Loading />}>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md"
+        >
+          <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Create Your Account</h2>
+          {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
 
-      {/* Sign-up card */}
-      <div className="bg-gray-100 rounded-md border border-gray-300  p-8 w-full max-w-lg">
-        <h2 className="text-5xl mb-16 text-center text-gray-800">Let’s get started!</h2>
-
-        {/* Name */}
-        <label className="block mb-6">
-          <span className="text-lg font-medium text-gray-700">Full Name</span>
-          <div className="relative mt-1">
-            <User className="absolute left-3 top-2.5 text-gray-400" size={18} />
+          {/* Full Name */}
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-1" htmlFor="name">
+              Full Name
+            </label>
             <input
               type="text"
-              className="w-full pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:ring-1 focus:ring-[#FACC15] focus:outline-none"
-              placeholder="Enter your name"
+              id="name"
+              placeholder="Enter your full name"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={name}
               onChange={e => setName(e.target.value)}
+              required
             />
-
           </div>
-        </label>
 
-        {/* Email */}
-        <label className="block mb-6">
-          <span className="text-lg font-medium text-gray-700">Work Email</span>
-          <div className="relative mt-1">
-            <Mail className="absolute left-3 top-2.5 text-gray-400" size={18} />
+          {/* Email */}
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-1" htmlFor="email">
+              Email Address
+            </label>
             <input
               type="email"
-              className="w-full pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:ring-1 focus:ring-[#FACC15] focus:outline-none"
+              id="email"
               placeholder="Enter your email"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={email}
               onChange={e => setEmail(e.target.value)}
+              required
             />
           </div>
-        </label>
 
-        {/* Password */}
-        <label className="block mb-6">
-          <span className="text-lg font-medium text-gray-700">Password</span>
-          <div className="relative mt-1">
-            <Lock className="absolute left-3 top-2.5 text-gray-400" size={18} />
+          {/* Password with show/hide */}
+          <div className="mb-6 relative">
+            <label className="block text-gray-700 mb-1" htmlFor="password">
+              Password
+            </label>
             <input
-              type="password"
-              className="w-full pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:ring-1 focus:ring-[#FACC15] focus:outline-none"
-              placeholder="Create a strong password"
+              type={showPassword ? 'text' : 'password'}
+              id="password"
+              placeholder="Create a password"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={password}
               onChange={e => setPassword(e.target.value)}
+              required
             />
+            <button
+              type="button"
+              className="absolute right-2 -bottom-0.5 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+              onClick={() => setShowPassword(!showPassword)}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
+            >
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            </button>
           </div>
-        </label>
 
-        {/* Submit */}
-        <button type="button" className="w-full bg-[#022155] text-white text-xl font-semibold py-4 rounded-lg hover:bg-[#FACC15] transition">
-          Access Your Workspace
-        </button>
-
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition duration-300"
+          >
+            Sign Up
+          </button>
+        </form>
       </div>
-    </div>
+    </Suspense>
   );
 }
